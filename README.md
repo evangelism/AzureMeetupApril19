@@ -14,6 +14,7 @@ export AZURE_DNS_PREFIX=stas-k8s			-- Azure DNS Prefix for Azure Container Servi
 export AZURE_SA_NAME=stask8sdeisstorage		-- Azure Storage Account name for DEIS usage<br/>
 
 You need to instal the following utils to use this scripts:
+
 **kubectl** -- https://kubernetes.io/docs/tasks/kubectl/install/<br/>
 **helm** -- https://github.com/kubernetes/helm/blob/master/docs/install.md<br/>
 **deis** -- http://docs.deis.io/en/latest/using_deis/install-client/<br/>
