@@ -7,11 +7,16 @@ PPT and scrupts form Azure Microservicrs Meetup at April 19
 
 Change the following parameters to use
 
-export AZURE_RG_NAME=stas-k8s-rg			-- Azure Resource Group name<br/> 
-export AZURE_DC_LOCATION=southcentralus		-- Azure DC Location<br/>
-export AZURE_SERVICE_NAME=stas-k8s-acs		-- Azure Container Service name<br/>
-export AZURE_DNS_PREFIX=stas-k8s			-- Azure DNS Prefix for Azure Container Service<br/>
-export AZURE_SA_NAME=stask8sdeisstorage		-- Azure Storage Account name for DEIS usage<br/>
+**Azure Resource Group name**<br/>
+export AZURE_RG_NAME=stas-k8s-rg<br/>			 
+**Azure DC Location**<br/>
+export AZURE_DC_LOCATION=southcentralus<br/>
+**Azure Container Service name**<br/>
+export AZURE_SERVICE_NAME=stas-k8s-acs<br/>		
+**Azure DNS Prefix for Azure Container Service**<br/>
+export AZURE_DNS_PREFIX=stas-k8s<br/>
+**Azure Storage Account name for DEIS usage**<br/>
+export AZURE_SA_NAME=stask8sdeisstorage<br/>
 
 You need to instal the following utils to use this scripts:
 
