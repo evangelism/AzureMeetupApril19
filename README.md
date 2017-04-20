@@ -3,10 +3,9 @@
 PPT and scripts form Azure Microservicrs Meetup at April 19
 
 ## Presentations
-"Microservices in Azire.pdf" - PPT from the meetup about Microservices and Azure for it (Stas Pavlov)
-"Azure Service Fabric.pdf" - PPT from the meetup about Azure Service Fabric  (Evgeny Grigorenko) 
-"Why DevOps Matters.pdf" - PPT from the meetup about DevOps (Vladimir Gusarov)
-
+"Microservices in Azire.pdf" - PPT from the meetup about Microservices and Azure for it (Stas Pavlov)  
+"Azure Service Fabric.pdf" - PPT from the meetup about Azure Service Fabric  (Evgeny Grigorenko)  
+"Why DevOps Matters.pdf" - PPT from the meetup about DevOps (Vladimir Gusarov)  
 
 ## Kuberenetes with ACS and Deis simple deployment scripts 
 **createk8s.sh** - bash script with parameters to create Kubertentes cluster at Azure Container Services  
@@ -56,37 +55,43 @@ Execute the following command to find EXTERNAL IP of your Kubernetes cluster:
 kubectl --namespace=deis get service deis-router
 ```
 You results will look like this one:
-   NAME          CLUSTER-IP    EXTERNAL-IP    PORT(S)                                                    AGE
-   deis-router   10.0.113.22   1.1.1.1        80:31912/TCP,443:31642/TCP,2222:31239/TCP,9090:32507/TCP   5m
-
+<pre>
+ NAME          CLUSTER-IP    EXTERNAL-IP    PORT(S)                                                    AGE
+ deis-router   10.0.113.22   1.1.1.1        80:31912/TCP,443:31642/TCP,2222:31239/TCP,9090:32507/TCP   5m
+ </pre>
 Use EXTERNAL-IP value to build the hostname to access Deis. It will be:  
-  deis.<EXTERNAL-IP>.nip.io  
+<pre>
+deis.<EXTERNAL-IP>.nip.io  
+</pre>
 For example, for the output above it is:
-  deis.1.1.1.1.nip.io
-
+ <pre>
+ deis.1.1.1.1.nip.io
+ </pre>
 To deploy your first app you need to register on Deis using following command:
 ```bash
 deis register http://deis.<EXTERNAL-IP>.nip.io 
 ```
 Example output:  
-  stas@ubuntuserver:~$ deis register http://deis.1.1.1.1.nip.io
-  username: admin
-  password:
-  password (confirm):
-  email: stanisp@microsoft.com
-  Registered admin
-  Logged in as admin
-  Configuration file written to /home/stas/.deis/client.json
-  As the first registered user you will receive adminstrative priveleges.  
-
+<pre>
+stas@ubuntuserver:~$ deis register http://deis.1.1.1.1.nip.io
+username: admin
+password:
+password (confirm):
+email: myemail@mycompany.com
+Registered admin
+Logged in as admin
+Configuration file written to /home/stas/.deis/client.json
+As the first registered user you will receive adminstrative priveleges.  
+</pre>
 Check that you set all executing following command:
 ```bash
 deis whoami
 ```
 Example output: 
-   stas@ubuntuserver:~$ deis whoami
-   You are admin at http://deis.1.1.1.1.nip.io
-
+<pre>
+ stas@ubuntuserver:~$ deis whoami
+ You are admin at http://deis.1.1.1.1.nip.io
+ </pre>
  And finally add your ssh pub key to Deis:
 ```bash
  deis keys:add ~/.ssh/id_rsa.pub
@@ -108,6 +113,8 @@ curl http://my-first-deis-app.deis.<EXTERNAL-IP>.nip.io
 ```
 where <EXTERNAL-IP> is the EXTERNAL IP of deis-router you detected before.  
 Example output:
-   stas@ubuntuserver:~/example-go$ curl http://my-first-deis-app.deis.1.1.1.1.nip.io
-   Powered by Deis
-   Release v2 on my-first-deis-app-web-4229391613-ps87f  
+ <pre>
+ stas@ubuntuserver:~/example-go$ curl http://my-first-deis-app.deis.1.1.1.1.nip.io
+ Powered by Deis
+ Release v2 on my-first-deis-app-web-4229391613-ps87f  
+ </pre>
