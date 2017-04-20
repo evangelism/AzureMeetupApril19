@@ -9,7 +9,7 @@ export AZURE_DNS_PREFIX=stas-k8s
 # Azure Storage Account name for DEIS usage
 export AZURE_SA_NAME=stask8sdeisstorage		
 
-# Init Helm localy and install Triller at Kubernetes cluster
+# Init Helm localy and install Tiller at Kubernetes cluster
 helm init
 
 # Add Deis repository to helm
