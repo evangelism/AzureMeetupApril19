@@ -7,7 +7,7 @@ PPT and scripts form Azure Microservicrs Meetup at April 19
 "Azure Service Fabric.pdf" - PPT from the meetup about Azure Service Fabric  (Evgeny Grigorenko)  
 "Why DevOps Matters.pdf" - PPT from the meetup about DevOps (Vladimir Gusarov)  
 
-## Kuberenetes with ACS and Deis simple deployment scripts 
+## Kubernetes with ACS and Deis simple deployment scripts 
 **createk8s.sh** - bash script with parameters to create Kubertentes cluster at Azure Container Services  
 **createdeis.sh** - bash script with parameters to create Deis Workflow on created Kuberntetes cluster (use the same prameters as **createk8s.sh**)
 
@@ -61,7 +61,7 @@ You results will look like this one:
  </pre>
 Use EXTERNAL-IP value to build the hostname to access Deis. It will be:  
 <pre>
-deis.<EXTERNAL-IP>.nip.io  
+deis.EXTERNAL-IP.nip.io  
 </pre>
 For example, for the output above it is:
  <pre>
@@ -69,7 +69,7 @@ For example, for the output above it is:
  </pre>
 To deploy your first app you need to register on Deis using following command:
 ```bash
-deis register http://deis.<EXTERNAL-IP>.nip.io 
+deis register http://deis.EXTERNAL-IP.nip.io 
 ```
 Example output:  
 <pre>
@@ -109,9 +109,9 @@ sudo chmod +x ctestdeis.s
 ```
 After the script execution **my-first-deis-app** was created. You can check it by using the following command:
 ```bash
-curl http://my-first-deis-app.deis.<EXTERNAL-IP>.nip.io  
+curl http://my-first-deis-app.deis.EXTERNAL-IP.nip.io  
 ```
-where <EXTERNAL-IP> is the EXTERNAL IP of deis-router you detected before.  
+where EXTERNAL-IP is the EXTERNAL IP of deis-router you detected before.  
 Example output:
  <pre>
  stas@ubuntuserver:~/example-go$ curl http://my-first-deis-app.deis.1.1.1.1.nip.io
