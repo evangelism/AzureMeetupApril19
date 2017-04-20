@@ -18,7 +18,7 @@ Change the following parameters to use for your test:
 
 ## You need to instal the following utils to use this scripts:
 
-Before run the scripts you need to login fo Azure CLI with your credentials using the following command:
+Before run the scripts you need to perform login to your Azure subscripion with Azure CLI using the following command:
 ```
 az login
 ```
