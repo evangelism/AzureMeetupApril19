@@ -81,9 +81,9 @@ email: myemail@mycompany.com
 Registered admin
 Logged in as admin
 Configuration file written to /home/stas/.deis/client.json
-As the first registered user you will receive adminstrative priveleges.  
 </pre>
-Check that you set all executing following command:
+As the first registered user you will receive adminstrative priveleges.  
+Check that you set all right executing following command:
 ```bash
 deis whoami
 ```
@@ -111,7 +111,7 @@ After the script execution **my-first-deis-app** was created. You can check it b
 ```bash
 curl http://my-first-deis-app.deis.EXTERNAL-IP.nip.io  
 ```
-where EXTERNAL-IP is the EXTERNAL IP of deis-router you detected before.  
+where EXTERNAL-IP is the EXTERNAL-IP of deis-router you detected before.  
 Example output:
  <pre>
  stas@ubuntuserver:~/example-go$ curl http://my-first-deis-app.deis.1.1.1.1.nip.io
