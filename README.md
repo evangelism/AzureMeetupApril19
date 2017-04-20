@@ -61,12 +61,12 @@ You results will look like this one:
  </pre>
 Use EXTERNAL-IP value to build the hostname to access Deis. It will be:  
 <pre>
-deis.EXTERNAL-IP.nip.io  
+deis.EXTERNAL-IP.nip.io
 </pre>
 For example, for the output above it is:
- <pre>
+<pre>
  deis.1.1.1.1.nip.io
- </pre>
+</pre>
 To deploy your first app you need to register on Deis using following command:
 ```bash
 deis register http://deis.EXTERNAL-IP.nip.io 
@@ -105,7 +105,7 @@ For Containers - https://deis.com/docs/workflow/applications/using-dockerfiles/
 Or you can use prepared **testdeis.sh** script. 
 Don't forgert to mark the scripts as executable:
 ```bash
-sudo chmod +x ctestdeis.s
+sudo chmod +x testdeis.sh
 ```
 After the script execution **my-first-deis-app** was created. You can check it by using the following command:
 ```bash
@@ -113,8 +113,8 @@ curl http://my-first-deis-app.deis.EXTERNAL-IP.nip.io
 ```
 where EXTERNAL-IP is the EXTERNAL-IP of deis-router you detected before.  
 Example output:
- <pre>
- stas@ubuntuserver:~/example-go$ curl http://my-first-deis-app.deis.1.1.1.1.nip.io
- Powered by Deis
- Release v2 on my-first-deis-app-web-4229391613-ps87f  
- </pre>
+<pre>
+stas@ubuntuserver:~/example-go$ curl http://my-first-deis-app.deis.1.1.1.1.nip.io
+Powered by Deis
+Release v2 on my-first-deis-app-web-4229391613-ps87f
+</pre>
