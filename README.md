@@ -1,6 +1,6 @@
 # Azure Microservicrs Meetup at April 19
 
-PPT and scrupts form Azure Microservicrs Meetup at April 19
+PPT and scripts form Azure Microservicrs Meetup at April 19
 
 **createk8s.sh** - bash script with parameters to create Kubertentes cluster at Azure Container Services  
 **createdeis.sh** - bash script with parameters to create Deis Workflow on created Kuberntetes cluster (use the same prameters as **createk8s.sh**)
@@ -16,7 +16,12 @@ Change the following parameters to use for your test:
 |Azure DNS Prefix for Azure Container Service|AZURE_DNS_PREFIX| stas-k8s |
 |Azure Storage Account name for DEIS usage|AZURE_SA_NAME |stask8sdeisstorage |
 
-You need to instal the following utils to use this scripts:
+## You need to instal the following utils to use this scripts:
+
+Before run the scripts you need to login fo Azure CLI with your credentials using the following command:
+```
+az login
+```
 
  Azure CLI 2.0  
 **az** - https://docs.microsoft.com/en-us/cli/azure/install-azure-cli  
@@ -38,6 +43,3 @@ For Containers - https://deis.com/docs/workflow/applications/using-dockerfiles/
 "Microservices in Azire.pdf" - PPT from the meetup about Microservices and Azure for it (Stas Pavlov)
 "Azure Service Fabric.pdf" - PPT from the meetup about Azure Service Fabric  (Evgeny Grigorenko) 
 "Why DevOps Matters.pdf" - PPT from the meetup about DevOps (Vladimir Gusarov)
-
-
-
