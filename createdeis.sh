@@ -26,5 +26,3 @@ helm install deis/workflow --namespace=deis --set global.storage=azure,azure.acc
 
 # Check that Desi pods starting at Kubernetes cluster
 kubectl --namespace=deis get pods
-
-#kubectl --namespace=deis get service deis-router
